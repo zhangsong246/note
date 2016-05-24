@@ -52,11 +52,19 @@ text in b_branch
 (
 再再进阶：
 remote：是一个共享的Git仓库，它允许不同位置的合作者，在同一个Git工程上操作；
-将一个远程的仓库内容克隆到本地目录，可以使用git clone remote_location clone_name，remote_location是远程仓库的地址，clone_name是本地的目录（克隆之后，在这个目录下的修改只会影响到本地仓库，不会影响共享的工程）；
+将一个远程的仓库内容克隆到本地目录，可以使用git clone remote_location clone_name，remote_location是远程仓库的地址，clone_name是本地的目录,
+（克隆之后，在这个目录下的修改只会影响到本地仓库，不会影响共享的工程）；
 默认的远程仓库地址，Git使用origin来表示，使用git remote -v可以显示远程仓库列表，用简称origin表示，还显示了仓库的地址，如（git@github.com:zhangsong246/note.git (fetch)；
 使用git fetch 能将远程目录（git clone的原地址下）的Git工程，抓取到本地，但是存放在一个新的分支下，新的分支用origin/开头；
 紧接上一步，再使用git merge origin/some_branch就能将新抓取的分支，合并到当前分支下；
 这样git log就能够将合作者的提交记录显示出来；
 使用git push origin branch_name能够将本地分支，推送到远程地址，这里用origin简称；
-
 )
+
+（
+自学习：
+使用git config --global user.name "your_name"，能配置git签名中的name；
+使用git config --global user.email "your_email"，能配置git签名中的email；
+使用git log --oneline --decorate能够显示当前HEAD指针指向的版本镜像；
+
+）
